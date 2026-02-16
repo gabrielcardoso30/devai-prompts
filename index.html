@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompts para Devs & PMs | Liquid Glass</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="glass-container">
+        <header>
+            <h1>🚀 Prompts para Devs & PMs</h1>
+            <p>Uma coleção curada para extrair o máximo de IAs generativas.</p>
+            <a href="https://github.com/gabrielcardoso30/devai-prompts" target="_blank" class="github-btn">
+                Ver no GitHub
+            </a>
+        </header>
+
+        <main id="prompt-grid" class="grid-container">
+            <!-- Cards will be injected here by JS -->
+        </main>
+
+        <footer>
+            <p>Feito com 💜 por <a href="https://github.com/gabrielcardoso30" target="_blank">Gabriel Cardoso</a></p>
+        </footer>
+    </div>
+
+    <!-- Modal for Prompt Details -->
+    <div id="prompt-modal" class="modal hidden">
+        <div class="modal-content glass-modal">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body" class="markdown-body">
+                <!-- Markdown content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
