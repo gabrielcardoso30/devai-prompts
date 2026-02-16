@@ -1,6 +1,6 @@
 # 🚀 Prompts para Devs & PMs
 
-> Uma coleção curada de prompts para auxiliar Desenvolvedores, Engenheiros de Software e Gerentes de Projetos a extraírem o máximo de IAs generativas (Gemini, ChatGPT, Claude).
+> Uma coleção curada de prompts para auxiliar Desenvolvedores, Engenheiros de Software e Gerentes de Produto a extraírem o máximo de IAs generativas (Gemini, ChatGPT, Claude).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
@@ -9,47 +9,38 @@
 
 Este repositório serve como uma **biblioteca centralizada de comandos (prompts)** testados e refinados para otimizar o fluxo de trabalho em desenvolvimento de software e gestão de projetos.
 
-O objetivo é reduzir o tempo gasto na criação de contextos complexos e fornecer templates que geram respostas de alta qualidade para tarefas como refatoração de código, criação de user stories, planejamento de arquitetura e análise de requisitos.
+O objetivo é reduzir o tempo gasto na criação de contextos complexos e fornecer templates que geram respostas de alta qualidade.
 
 ---
 
-## 📂 Estrutura do Repositório
+## 📂 Catálogo de Prompts
 
-Os prompts estão organizados por pastas de acordo com a área de atuação:
+Aqui você encontra os prompts disponíveis no projeto, organizados por área de atuação.
 
-- **/Development**
-  - `Code-Review.md`: Prompts para análise de clean code, segurança e performance.
-  - `Refactoring.md`: Focado em modernização de legado e padrões de projeto (SOLID, DRY).
-  - `Documentation.md`: Geração de Docstrings, Readmes e documentação técnica.
-  - `Unit-Tests.md`: Criação de casos de teste (xUnit, NUnit, Jest).
+### 🛠️ Desenvolvimento & Engenharia de Software
 
-- **/Project-Management**
-  - `Agile-Rituals.md`: Prompts para Dailies, Retrospectivas e Planning.
-  - `User-Stories.md`: Geração de histórias com critérios de aceitação (Gherkin).
-  - `Risk-Analysis.md`: Matrizes de risco e planos de mitigação.
+| Arquivo | Atuação (Persona) | O que faz? |
+| :--- | :--- | :--- |
+| [**Code Review & Segurança**](./analisar-codigo-v1.md) | Senior Code Reviewer | Analisa código em busca de erros lógicos, falhas de segurança (OWASP), *bad smells* e violações de SOLID. |
+| [**Performance .NET**](./analisar-performance-dotnet-v1.md) | Engenheiro de Performance | Focado em otimização de C#: LINQ, `AsNoTracking`, alocação de memória e *async/await*. |
+| [**Documentação Técnica**](./documentar-metodo-ou-classe-v1.md) | Tech Lead & Mentor | Gera documentação didática e XML Docs (`///`) profissionais para métodos e classes. |
+| [**Execução de Demandas**](./nova-demanda-v1.md) | Arquiteto de Soluções | Cria um plano detalhado de implementação para novas features, com checklist e *rollback plan*. |
 
-- **/Architecture**
-  - `System-Design.md`: Desenho de soluções, escolha de stack e diagramas.
-  - `Database.md`: Modelagem de dados e otimização de queries SQL.
+### 📊 Gestão de Produto & Empreendedorismo
 
----
-
-## 🔥 Exemplos de Uso
-
-### Para Desenvolvedores (Refatoração)
-> "Atue como um Arquiteto de Software Sênior especializado em [Linguagem]. Analise o código abaixo em busca de violações dos princípios SOLID e sugira uma refatoração que melhore a legibilidade e a testabilidade."
-
-### Para PMs (Escrita de Histórias)
-> "Atue como um Product Owner. Com base no requisito funcional abaixo, escreva uma User Story seguindo o padrão INVEST, incluindo 5 Critérios de Aceitação detalhados e cenários de teste."
+| Arquivo | Atuação (Persona) | O que faz? |
+| :--- | :--- | :--- |
+| [**Especificação de Tarefas**](./descrever-tarefas-v1.md) | PM & Analista de Requisitos | Transforma solicitações vagas em *User Stories* completas com Critérios de Aceite e Gherkin. |
+| [**Co-Fundador Técnico**](./consultar-cofundador-tecnico-v1.md) | CTO / Co-founder | Guia você desde a ideia ("Tenho um app em mente") até o MVP, passando por descoberta e planejamento. |
 
 ---
 
 ## 🛠 Como Utilizar
 
-1. Navegue até a pasta da categoria desejada.
-2. Copie o prompt do arquivo `.md`.
-3. Substitua os campos entre colchetes `[ ]` ou chaves `{ }` com o contexto do seu projeto.
-4. Cole na sua IA de preferência.
+1.  **Escolha o Prompt**: Navegue pela tabela acima e clique no link do arquivo desejado.
+2.  **Copie o Conteúdo**: Copie todo o texto do arquivo `.md`.
+3.  **Preencha os Placeholders**: Procure por campos como `{{COLE_SEU_CODIGO_AQUI}}` ou `[Descreva sua ideia]` e substitua pelo seu contexto.
+4.  **Execute na IA**: Cole o prompt final na sua IA de preferência (Gemini, ChatGPT, Claude).
 
 ---
 
@@ -57,12 +48,12 @@ Os prompts estão organizados por pastas de acordo com a área de atuação:
 
 Contribuições são o que fazem a comunidade open source um lugar incrível! Sinta-se à vontade para enviar seus melhores prompts.
 
-1. Faça um Fork do projeto.
-2. Crie uma Branch para sua Feature (`git checkout -b feature/NovoPromptIncrivel`).
-3. Adicione seu prompt no arquivo correspondente (ou crie um novo).
-4. Faça o Commit (`git commit -m 'Add: Prompt para Migração de Legado'`).
-5. Faça o Push (`git push origin feature/NovoPromptIncrivel`).
-6. Abra um Pull Request.
+1.  Faça um Fork do projeto.
+2.  Crie uma Branch para sua Feature (`git checkout -b feature/NovoPromptIncrivel`).
+3.  Adicione seu prompt seguindo o padrão dos existentes.
+4.  Faça o Commit (`git commit -m 'feat: adicionar prompt de arquitetura'`).
+5.  Faça o Push (`git push origin feature/NovoPromptIncrivel`).
+6.  Abra um Pull Request.
 
 ---
 
