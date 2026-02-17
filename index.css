@@ -153,18 +153,26 @@ header p {
 
 /* About Project Section */
 .about-project {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 2rem;
-    line-height: 1.8;
+    padding: 2.5rem;
+    line-height: 1.6;
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.about-content,
+.emotional-content {
+    flex: 1;
 }
 
 .about-content h2,
 .emotional-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
     background: linear-gradient(to right, #fff, #667eea);
     -webkit-background-clip: text;
     background-clip: text;
@@ -173,17 +181,16 @@ header p {
 
 .about-content p,
 .emotional-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.section-divider {
-    border: none;
-    border-top: 1px solid var(--glass-border);
-    margin: 3rem 0;
-    opacity: 0.5;
+.about-content p:last-child,
+.emotional-content p:last-child {
+    margin-bottom: 0;
 }
+
 
 .emotional-content {
     border-left: 4px solid #667eea;
@@ -378,7 +385,9 @@ footer a {
     }
 
     .about-project {
-        padding: 2.5rem;
+        padding: 2rem;
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 
