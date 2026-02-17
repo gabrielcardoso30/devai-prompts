@@ -65,7 +65,7 @@ async function openModal(filename) {
     modalBody.innerHTML = '<p style="text-align:center;">Carregando...</p>';
 
     try {
-        const response = await fetch(filename);
+        const response = await fetch('../' + filename);
         if (!response.ok) throw new Error('Falha ao carregar o prompt.');
 
         const markdown = await response.text();

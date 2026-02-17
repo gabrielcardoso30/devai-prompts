@@ -322,3 +322,71 @@ footer a {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.4);
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .glass-container {
+        padding: 2rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .glass-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    header {
+        margin-bottom: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .glass-modal {
+        padding: 2rem 1.5rem;
+        width: 95%;
+    }
+
+    .close-btn {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .markdown-body h1 { font-size: 1.8rem; }
+    .markdown-body h2 { font-size: 1.5rem; }
+    .markdown-body h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    .github-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
