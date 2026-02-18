@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gabrielcardoso30.github.io/devai-prompts/sitemap.xml
