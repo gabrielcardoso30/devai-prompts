@@ -1,111 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prompts para Devs & PMs | Liquid Glass</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Background Elements -->
     <div class="background">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
     </div>
 
     <!-- Main Container -->
     <div class="glass-container">
-        <header>
-            <h1>🚀 Prompts para Devs & PMs</h1>
-            <p>Uma coleção curada para extrair o máximo de IAs generativas.</p>
-            <a href="https://github.com/gabrielcardoso30/devai-prompts" target="_blank" class="github-btn">
+      <header>
+        <h1>🚀 Prompts para Devs & PMs</h1>
+        <p>Uma coleção curada para extrair o máximo de IAs generativas.</p>
+
+        <nav class="nav-buttons">
+            <div class="nav-group-scroll">
+                <button class="nav-btn" data-target="about">Sobre o Projeto</button>
+                <button class="nav-btn" data-target="free">Sempre Gratuito</button>
+                <button class="nav-btn" data-target="motivation">Motivação</button>
+            </div>
+            <a
+                href="https://github.com/gabrielcardoso30/devai-prompts"
+                target="_blank"
+                class="github-btn"
+            >
                 Ver no GitHub
             </a>
-        </header>
+        </nav>
+      </header>
 
-        <section class="intro-section">
-            <div class="intro-column-left">
-                <div class="intro-card glass-card">
-                    <h2>📋 Sobre o Projeto</h2>
-                    <p>Este repositório serve como uma <strong>biblioteca centralizada de comandos (prompts)</strong>
-                        testados e refinados para otimizar o fluxo de trabalho em desenvolvimento de software e gestão
-                        de
-                        projetos.</p>
-                    <p>O objetivo é reduzir o tempo gasto na criação de contextos complexos e fornecer templates que
-                        geram
-                        respostas de alta qualidade.</p>
-                </div>
+      <!-- Intro Section Removed by Request -->
 
-                <div class="intro-card glass-card">
-                    <h2>💎 Sempre Gratuito</h2>
-                    <p>Acreditamos na democratização do conhecimento técnico. Este projeto é e <strong>sempre será 100%
-                            gratuito</strong> para a comunidade.</p>
-                    <p>Nosso compromisso é manter esta biblioteca aberta, colaborativa e em constante evolução, sem
-                        barreiras de acesso.</p>
-                </div>
-            </div>
+      <p class="nav-instruction">Navegue pelas categorias abaixo para encontrar o prompt ideal:</p>
 
-            <div class="intro-column-right">
-                <div class="intro-card glass-card emotional-card">
-                    <h2>❤️ Por que criamos isso?</h2>
-                    <p>Sabe aquela sensação de olhar para uma tela em branco às 18h de uma sexta-feira, precisando
-                        escrever
-                        uma documentação técnica perfeita? Ou o peso de herdar um código legado sem nenhum comentário,
-                        que
-                        parece uma bomba-relógio prestes a explodir na sua mão?</p>
-                    <p>Nós conhecemos essa dor.</p>
-                    <p>Criamos este projeto porque cansamos de ver desenvolvedores brilhantes perdendo horas em tarefas
-                        repetitivas, lutando contra o bloqueio criativo ou se sentindo sobrecarregados pela complexidade
-                        crescente do software moderno.</p>
-                    <p>Acreditamos que a programação é uma <strong>arte</strong>, e que você deveria gastar sua energia
-                        resolvendo problemas complexos de arquitetura, e não formatando strings ou escrevendo
-                        <em>boilerplate</em>.
-                    </p>
-                    <p>Estes prompts não são apenas "comandos para o ChatGPT". São <strong>ferramentas de
-                            sobrevivência</strong>. São atalhos mentais que transformam ansiedade em produtividade.</p>
-                    <p>Queremos que você termine seu trabalho mais cedo. Queremos que você sinta orgulho do código que
-                        entrega. Queremos que você tenha um "Senior Partner" disponível 24/7 para te ajudar a pensar.
-                    </p>
-                    <p>É por isso que estamos aqui.</p>
-                </div>
-            </div>
-        </section>
+      <!-- Tabs Container (Desktop) -->
+      <div id="tabs-container" class="tabs-container">
+        <!-- Tabs will be injected here by JS -->
+      </div>
 
-        <main id="prompt-grid" class="grid-container">
-            <!-- Cards will be injected here by JS -->
-        </main>
+      <!-- Dropdown Container (Mobile) -->
+      <div id="mobile-category-container" class="mobile-category-container">
+          <select id="category-select" class="category-select">
+              <!-- Options will be injected here by JS -->
+          </select>
+      </div>
 
-        <footer>
-            <p>Feito com 💜 por <a href="https://github.com/gabrielcardoso30" target="_blank">Gabriel Cardoso</a></p>
-        </footer>
+      <main id="prompt-grid" class="grid-container">
+        <!-- Cards will be injected here by JS -->
+      </main>
+
+      <footer>
+        <p>
+          Feito com 💜 por
+          <a href="https://github.com/gabrielcardoso30" target="_blank"
+            >Gabriel Cardoso</a
+          >
+        </p>
+      </footer>
     </div>
 
     <!-- Modal for Prompt Details -->
     <div id="prompt-modal" class="modal hidden">
-        <div class="modal-content glass-modal">
-            <span class="close-btn">&times;</span>
-            <div id="modal-body" class="markdown-body">
-                <!-- Markdown content will be injected here -->
-            </div>
+      <div class="modal-content glass-modal">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body" class="markdown-body">
+          <!-- Markdown content will be injected here -->
         </div>
+      </div>
     </div>
 
     <!-- Custom Script -->
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
