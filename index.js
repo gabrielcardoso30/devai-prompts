@@ -314,3 +314,96 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Feedback System Logic
+const feedbackBtn = document.getElementById('feedback-btn');
+const feedbackModal = document.getElementById('feedback-modal');
+const closeFeedbackBtn = document.querySelector('.close-feedback-btn');
+const feedbackForm = document.getElementById('feedback-form');
+
+// Open Feedback Modal
+if (feedbackBtn) {
+    feedbackBtn.addEventListener('click', () => {
+        if(feedbackModal) {
+            feedbackModal.classList.remove('hidden');
+            feedbackModal.classList.add('visible');
+        }
+    });
+}
+
+// Close Feedback Modal
+if (closeFeedbackBtn) {
+    closeFeedbackBtn.addEventListener('click', () => {
+        if(feedbackModal) {
+            feedbackModal.classList.remove('visible');
+        }
+    });
+}
+
+// Close on click outside
+window.addEventListener('click', (e) => {
+    if (feedbackModal && e.target === feedbackModal) {
+        feedbackModal.classList.remove('visible');
+    }
+});
+
+// Handle Form Submit
+if (feedbackForm) {
+    feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const typeSelect = document.getElementById('feedback-type');
+        const titleInput = document.getElementById('feedback-title');
+        const descInput = document.getElementById('feedback-description');
+
+        const type = typeSelect ? typeSelect.value : 'other';
+        const title = titleInput ? titleInput.value : '';
+        const description = descInput ? descInput.value : '';
+
+        // Map type to labels
+        let labels = '';
+        let titlePrefix = '';
+        
+        switch (type) {
+            case 'enhancement':
+                labels = 'enhancement';
+                titlePrefix = '[Feature]';
+                break;
+            case 'bug':
+                labels = 'bug';
+                titlePrefix = '[Bug]';
+                break;
+            default:
+                labels = 'triage';
+                titlePrefix = '[Feedback]';
+        }
+
+        const finalTitle = `${titlePrefix} ${title}`;
+        
+        const bodyContent = `
+**Descrição:**
+${description}
+
+---
+**Metadados:**
+- **Tipo:** ${type}
+- **User Agent:** ${navigator.userAgent}
+- **Origem:** DevAI Prompts Site
+        `.trim();
+
+        // Construct GitHub URL
+        const baseUrl = 'https://github.com/gabrielcardoso30/devai-prompts/issues/new';
+        const params = new URLSearchParams({
+            title: finalTitle,
+            body: bodyContent,
+            labels: labels
+        });
+
+        // Open in new tab
+        window.open(`${baseUrl}?${params.toString()}`, '_blank');
+
+        // Reset and Close
+        feedbackForm.reset();
+        if(feedbackModal) feedbackModal.classList.remove('visible');
+    });
+}
+

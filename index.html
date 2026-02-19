@@ -93,12 +93,15 @@
       </main>
 
       <footer>
-        <p>
-          Desenvolvido por
-          <a href="https://github.com/gabrielcardoso30" target="_blank"
-            >Gabriel Cardoso</a
-          >. Um projeto open source, de brasileiro para brasileiro.
-        </p>
+        <div class="footer-content">
+          <p>
+            Desenvolvido por
+            <a href="https://github.com/gabrielcardoso30" target="_blank"
+              >Gabriel Cardoso</a
+            >. Um projeto open source, de brasileiro para brasileiro.
+          </p>
+          <button id="feedback-btn" class="footer-btn">🐛 Reportar Bug / Sugestão</button>
+        </div>
       </footer>
     </div>
 
@@ -109,6 +112,41 @@
         <div id="modal-body" class="markdown-body">
           <!-- Markdown content will be injected here -->
         </div>
+      </div>
+    </div>
+
+    <!-- Modal for Feedback/Bug Report -->
+    <div id="feedback-modal" class="modal hidden">
+      <div class="modal-content glass-modal feedback-modal-content">
+        <span class="close-feedback-btn">&times;</span>
+        <h2>📢 Feedback & Bugs</h2>
+        <p class="feedback-intro">Encontrou um erro ou tem uma ideia? Preencha abaixo e nós criaremos uma Issue no GitHub para você.</p>
+        
+        <form id="feedback-form" class="feedback-form">
+          <div class="form-group">
+            <label for="feedback-type">Tipo</label>
+            <select id="feedback-type" required>
+              <option value="enhancement">✨ Sugestão / Melhoria</option>
+              <option value="bug">🐛 Bug / Erro</option>
+              <option value="other">💬 Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-title">Título Resumido</label>
+            <input type="text" id="feedback-title" placeholder="Ex: Botão de copiar não funciona no Mobile" required />
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-description">Descrição Detalhada</label>
+            <textarea id="feedback-description" rows="5" placeholder="Descreva o que aconteceu ou sua ideia em detalhes..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Continuar no GitHub</span>
+            <span class="btn-icon">↗️</span>
+          </button>
+        </form>
       </div>
     </div>
 
