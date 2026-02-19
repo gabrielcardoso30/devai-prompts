@@ -40,6 +40,13 @@ const prompts = [
         description: 'Guia você desde a ideia até o MVP, passando por descoberta e planejamento.',
         category: 'Gestão de Produto & Empreendedorismo',
         subcategory: '💡 Estratégia & Discovery'
+    },
+    {
+        filename: 'padrao-commits-conventional.md',
+        title: 'Padrão de Commits (Conventional)',
+        description: 'Gera mensagens de commit padronizadas baseadas no diff, seguindo Conventional Commits.',
+        category: 'Desenvolvimento & Engenharia de Software',
+        subcategory: '🏗️ Git & Versionamento'
     }
 ];
 
