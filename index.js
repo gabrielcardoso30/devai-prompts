@@ -1,5 +1,12 @@
 const prompts = [
     {
+        filename: 'analise_pdf_projeto_sistema_super_detalhado.md',
+        title: 'Análise Técnica Completa de Projetos de Software via PDF',
+        description: 'Análise profunda de PDFs de sistemas, extraindo visão, requisitos, riscos e backlog detalhado com estimativas.',
+        category: 'Gestão de Produto & Empreendedorismo',
+        subcategory: '📊 Planejamento & Projetos'
+    },
+    {
         filename: 'revisao-codigo-seguranca.md',
         title: 'Code Review & Segurança',
         description: 'Analisa código em busca de erros lógicos, falhas de segurança (OWASP) e violações de SOLID.',
@@ -423,4 +430,3 @@ ${description}
         if(feedbackModal) feedbackModal.classList.remove('visible');
     });
 }
-

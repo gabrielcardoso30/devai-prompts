@@ -13,6 +13,13 @@ Escolhemos o **SemVer** (`MAJOR.MINOR.PATCH`) por ser o padrão mais eficiente e
 
 ---
 
+## [1.1.0] - 2026-02-21
+
+### Adicionado
+- **Novo Prompt:** "Análise Técnica Completa de Projetos de Software via PDF" adicionado à categoria de Gestão & Planejamento.
+
+---
+
 ## [1.0.0] - 2026-02-21
 
 Esta é a versão inicial do projeto, consolidando todas as funcionalidades desenvolvidas até o momento.
