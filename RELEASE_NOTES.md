@@ -17,6 +17,7 @@ Escolhemos o **SemVer** (`MAJOR.MINOR.PATCH`) por ser o padrão mais eficiente e
 
 ### Adicionado
 - **Google Analytics:** Integração com gtag.js para monitoramento de tráfego e análise de uso.
+- **Domínio Customizado:** Padronização de todas as URLs internas e metadados para `prompts.datalin.com.br`.
 
 ---
 
